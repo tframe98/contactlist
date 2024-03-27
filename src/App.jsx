@@ -1,7 +1,7 @@
 //below you will see a lot of pseudo code, this is mainly to help me differentiate the different types of `use` used in todays workshop and for me to reference back to when i get confused and or lost in 
 
 import { useEffect, useState } from 'react'; //importing `useState` and `useEffect` hooks from the react package, this allows me to manage the side effects and states in my app
-
+import './App.css';
 
 
 const App = () => { //`App` is declared as the root and serves as the main container for the whole app. Additionally this can be named anything and is not specific to react
@@ -35,16 +35,17 @@ const App = () => { //`App` is declared as the root and serves as the main conta
     {error && <p>Error: {error} </p>} 
 
     {!error && (
-      <ul>
+      <div className="users-container">
+      
         {users.map(user =>( 
-          <li key={user.id}>
-            <h2>{user.name}</h2>
-            <p>Email: {user.email} </p> 
-            
-            <p>Phone: {user.phone}</p>
-          </li>
+          <div className="user-row" key={user.id}>
+            <div className="user-name">{user.name}</div>
+            <div className="user-email">{user.email}</div>
+            <div className="user-phone">{user.phone}</div>
+          </div>
         ))}
-      </ul>
+      
+      </div>
     )}
       
     </>

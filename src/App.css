@@ -1,1 +1,23 @@
 
+h1 {
+  text-align: center;
+}
+
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.user-name, .user-email, .user-phone {
+  margin: 0 10px;
+  width: 25%;
+}
